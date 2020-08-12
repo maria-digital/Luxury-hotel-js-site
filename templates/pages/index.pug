@@ -1,0 +1,95 @@
+extends ../layout/main
+
+block main
+    section(class="intro" data-speed="10" data-type="background")
+        h3.subtitle Luxury hotel &amp;&nbsp;best resort
+        h1.intro__title Enjoy a&nbsp;luxury experience
+        a.button(href="list.html") Rooms &amp;&nbsp;Suites
+        form.intro__form
+            div.intro__input.intro__input_first
+                span.intro__text Check-in
+                div.intro__container
+                    input.intro__date(type="text")
+                    select.intro__month
+                        option(value="June") June
+            div.intro__input.intro__input_second
+                span.intro__text Check-out
+                div.intro__container
+                    input.intro__date(type="text")
+                    select.intro__month
+                        option(value="June") June
+            div.intro__input.intro__input_third
+                div.intro__text Guests
+                div.intro__container
+                    input.intro__date(type="text")
+            a.intro__button(href="list.html") Check availability
+    section.about
+        div.about__container
+            h3.subtitle Hotel Bayview
+            h2.about__title Pearl of&nbsp;the Adriatic
+            p.about__text Hotel Bayview is&nbsp;a&nbsp;luxurious boutique hotel located in&nbsp;the heart of&nbsp;Rovinj&rsquo;s lively Old town. Offering views of&nbsp;the harbor, St. Catherine&rsquo;s Island or&nbsp;the Main Square, each suite is&nbsp;fitted with design furniture and local art. Guests can relax at&nbsp;2&nbsp;on-site bars and a&nbsp;brasserie style restaurant.
+            button.button.button_yellow About&nbsp;us
+        div.about__images
+            img.about__img1(src="images/main/main1.png")
+            img.about__img2(src="images/main/main2.png")
+            img.about__img3(src="images/main/main3.png")
+    section.rooms__container
+        div.rooms
+            div.rooms__title-container
+                h3.subtitle Hotel Bayview
+                hr.rooms__hr
+                h2.rooms__title Best Rooms
+            div.rooms_list
+                ul
+                    li.room-big
+                        a.room-big__link(href="room.html")
+                            div.room.room_big.room_adriatic
+                                h4.room__title Adriatic Suite
+                            div.room__description.room__description_big
+                                h5.room__subtitle Adriatic Suite
+                                ul.room__benefits.room__benefits_small
+                                    li.room__benefit-item
+                                        span.room__rating 7.5
+                                        span.room__benefit 5 Reviews
+                                    li.room__benefit-item
+                                        img.room__benefit_user(src="images/icons/user.svg" width="17")
+                                        span.room__benefit 3 guests
+                                    li.room__benefit-item
+                                        img.room__benefit_square(src="images/icons/plan.svg" width="16")
+                                        span.room__benefit 57 m²
+                                p.room__text.room__text_main Offering 2&nbsp;balconies and views of&nbsp;Rovinj&rsquo;s Main Square and the lively waterfront and the main promenade.
+                                button.button.button_black Book now from 300$
+                div.room__container
+                    ul
+                        li.room.room_small.room_atelier
+                            a.room_link(href="room.html")
+                                h4.room__title Atelier
+                        li.room.room_small.room_gallery
+                            a.room_link(href="room.html")
+                                h4.room__title Gallery
+                    ul
+                        li.room.room_small.room_piazza
+                            a.room_link(href="room.html")
+                                h4.room__title Piazza
+                        li.room.room_small.room_grand_piazza
+                            a.room_link(href="room.html")
+                                h4.room__title Grand Piazza Suite
+    section.benefits
+        div.benefits__container
+            div.benefits__images
+                div
+                    img.benefits_image(src="images/benefits/benefit1.png")
+                    img.benefits_image(src="images/benefits/benefit2.png")
+                div
+                    img.benefits_image(src="images/benefits/benefit3.png")
+                    img.benefits_image(src="images/benefits/benefit4.png")
+            div.benefit
+                h3.subtitle.subtitle_white Luxury hotel &amp;&nbsp;best resort
+                h2.benefits__title Pearl of&nbsp;the
+                    span.title_yellow Adriatic
+                p.benefit__text Decorated with original art works by&nbsp;contemporary artists, all suites are air-conditioned and consist of&nbsp;a&nbsp;SMART&nbsp;TV, mini-bar and coffee/tea making facilities. Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna&nbsp;et. Quisque euismod orci ut&nbsp;et&nbsp;lobortis. Blandit vel sapien vitae, condimentum ultricies magna et&nbsp;orci ut&nbsp;et&nbsp;lobortis, Phasellus enim
+                button.button.button_black Check all packages
+    section.short-info
+        h5 The closest rocky public beach is&nbsp;a&nbsp;15-minute walk away. Pula Airport is&nbsp;at&nbsp;a&nbsp;distance of&nbsp;25&nbsp;mi away. Free private parking is&nbsp;available outside the pedestrian zone.
+
+

@@ -1,0 +1,88 @@
+extends ../layout/main
+
+block main
+    section.room-intro(data-speed="10" data-type="background")
+        h1.room-intro__title Adriatic Suite
+        div.room-intro__container
+            div.room-intro__text
+                ul.room-intro__navigation
+                    li
+                        a Description
+                    li
+                        a Room services
+                    li
+                        a Extra services
+                    li
+                        a Gallery
+                    li
+                        a Reviews
+                h4.room-intro__description
+                    span.room-intro__money 300
+                    span.room-intro__period $/for night
+    section.room-page
+        h1.room-page__title Adriatic Suite
+        h2.room-page__subtitle Hotel Bayview
+        div.room-page__main
+            div.room-page__container
+                div.room.room_adriatic.room_page
+                    div.room-page__intro
+                        span.room__rating 7.5
+                        span.room-page__reviews 5 reviews
+                div.room-benefits
+                    div.room-benefit
+                        img.room-benefit__image(src="images/icons/user.svg" width="29")
+                        span.room-benefit__description 3 guests
+                    div.room-benefit
+                        img.room-benefit__image(src="images/icons/plan.svg" width="29")
+                        span.room-benefit__description 57 M2
+                    div.room-benefit
+                        img.room-benefit__image(src="images/icons/apartment.svg" width="29" )
+                        span.room-benefit__description 300$ / for night
+                    div.room-benefit
+                        img.room-benefit__image(src="images/icons/calendar.svg" width="31")
+                        span.room-benefit__description week price
+                p.room-description Offering 2&nbsp;balconies and views of&nbsp;Rovinj&rsquo;s Main Square, the lively waterfront and the main promenade, this spacious suite is&nbsp;air-conditioned, in&nbsp;addition to&nbsp;2&nbsp;SMART TVs, mini-bar and coffee/tea making facilities. Modern-style bathroom includes a&nbsp;walk-in shower, a&nbsp;bath tub, a&nbsp;hairdryer and free toiletries. It&nbsp;is&nbsp;decorated with oils on&nbsp;canvas, rare photographs, and exceptional decorations by&nbsp;renowned local and international artists. Guests will receive complimentary jug of&nbsp;water, natural sirup and a&nbsp;fruit basket once upon arrival.
+                div.room-services
+                    h3.room-services__title Room Services
+                    ul.room-services__list
+                        li.room-service
+                            img.room-service__icon(src="images/icons/television.svg" width="20")
+                            span.room-service__description Television
+                        li.room-service
+                            img.room-service__icon(src="images/icons/no-smoking.svg" width="20")
+                            span.room-service__description No Smoking
+                        li.room-service
+                            img.room-service__icon(src="images/icons/summer.svg" width="16")
+                            span.room-service__description Private Beach
+                        li.room-service
+                            img.room-service__icon(src="images/icons/bath.svg" width="19")
+                            span.room-service__description Bathroom
+                        li.room-service
+                            img.room-service__icon(src="images/icons/bicycle.svg" width="19")
+                            span.room-service__description Bike Rental
+                        li.room-service
+                            img.room-service__icon(src="images/icons/cutlery.svg" width="15")
+                            span.room-service__description Breakfast Incl.
+                        li.room-service
+                            img.room-service__icon(src="images/icons/cocktail.svg" width="16")
+                            span.room-service__description Welcome Drink
+                        li.room-service
+                            img.room-service__icon(src="images/icons/towel.svg" width="20")
+                            span.room-service__description Loundry
+                        li.room-service
+                            img.room-service__icon(src="images/icons/beds.svg" width="19")
+                            span.room-service__description King Beds
+            form.room-form
+                h4.room-form__title 1 Guest
+                div.room-form__row
+                    div.room-form__container
+                        span.room-form__action Check-in
+                        span.room-form__date 26
+                        span.room-form__month June, 2020
+                        span.room-form__weekday Monday
+                    div.room-form__container
+                        span.room-form__action Check-out
+                        span.room-form__date 28
+                        span.room-form__month June, 2020
+                        span.room-form__weekday Wednesday
+                .button.button_yellow.button_big Book now

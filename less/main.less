@@ -1,0 +1,713 @@
+@import "colors.less";
+@import "fonts.less";
+
+.intro{
+  color: @white;
+  text-transform: uppercase;
+  text-align: center;
+  background: url("../images/background/background.png") 0 0 fixed no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(28, 28, 28, 0.2), rgba(28, 28, 28, 0.2));
+    width: 100%;
+    top: -70px;
+  }
+
+  &__form{
+    background: @white;
+    color: @darkGrey;
+    font-size: 9px;
+    display: flex;
+    position: relative;
+  }
+
+  &__text{
+    font-size: 11px;
+  }
+
+  &__input{
+    display: flex;
+    flex-direction: column;
+    padding: 23px 15px 20px;
+  }
+
+  &__button{
+    background: @lightBlack;
+    color: @white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover{
+      background: @brown;
+    }
+  }
+
+  &__date{
+    font-size: 37.5px;
+    font-family: @gildaFont;
+    width: 51px;
+    text-align: center;
+    height: 35px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  &__month{
+    font-family: @gildaFont;
+    border: none;
+    background: transparent;
+  }
+
+  &__title{
+    font-family: @gildaFont;
+    max-width: 700px;
+    position: relative;
+  }
+}
+
+.about{
+  color: @grey;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-between;
+
+  &__images{
+    position: relative;
+  }
+
+  &__title{
+    font-family: @gildaFont;
+    max-width: 700px;
+    line-height: 1;
+    color: @lightBlack;
+  }
+
+  &__img1{
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__img2{
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__img3{
+    position: absolute;
+  }
+
+  &__container{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__text{
+    color: @grey;
+  }
+
+}
+
+.rooms{
+  color: @grey;
+  margin: 0 auto 0;
+
+  &__container{
+    background: #f9f9f9;
+  }
+
+  &__hr{
+    width: 20px;
+  }
+  &_list{
+    display: flex;
+  }
+  
+
+  &__title{
+    font-family: @gildaFont;
+    line-height: 1;
+    color: @lightBlack;
+  }
+}
+
+.room-big__link{
+  display: block;
+  text-decoration: none;
+  color: @grey;
+}
+
+.room_link{
+  display: block;
+  height: 100%;
+}
+
+.benefits{
+  border-top: 1px solid;
+  background: @lightBlack;
+  box-sizing: border-box;
+
+  &__container{
+    margin: 0 auto;
+  }
+
+  &__images{
+    display: flex;
+  }
+
+  &__title{
+    font-family: @gildaFont;
+    max-width: 700px;
+    line-height: 1;
+    color: @white;
+  }
+
+}
+
+.benefit{
+    box-sizing: border-box;
+}
+
+.benefit__text{
+  color: @grey;
+}
+
+@media screen and (max-width: 1023px) {
+  .intro{
+    height: 237px;
+    position: relative;
+    background: url(../images/background/background.png) 0 0 fixed;
+    background-size: cover;
+
+    &:before{
+      height: 307px;
+    }
+
+    .subtitle{
+      display: none;
+    }
+
+    &__title{
+      font-size: 32px;
+      width: 50%;
+      margin: 0 auto;
+      line-height: 1.4;
+      padding: 60px 0 32px;
+    }
+
+    &__form{
+      position: absolute;
+      border: 1px solid @darkGrey;
+      width: 82%;
+      left: 9%;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 0 0 66px 0;
+      bottom: -267px;
+    }
+
+    &__input{
+      width: 33.3%;
+    }
+
+    &__text{
+      font-size: 14px;
+    }
+
+    &__date{
+      margin: 12px 0 0;
+    }
+
+    &__month{
+      display: block;
+      margin: 10px auto 0;
+      font-size: 20px;
+    }
+
+    &__button{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 25px 15px;
+      border: 1px solid @lightBlack;
+      font-size: 22px;
+    }
+  }
+
+  .about{
+    margin: 312px auto 0;
+
+    &__title{
+      font-size: 36px;
+      margin: 20px auto;
+    }
+
+    &__text{
+      font-size: 22px;
+      margin: 0 auto 32px;
+      width: 73%;
+      line-height: 1.65;
+    }
+
+    &__images{
+      width: 640px;
+      margin: 0 auto;
+      height: 330px;
+      overflow: hidden;
+    }
+
+    &__img1{
+      width: 298px;
+      height: 198px;
+      left: 0;
+      top: 68px;
+    }
+
+    &__img2{
+      width: 213px;
+      height: 286px;
+      top: 6px;
+      left: 425px;
+    }
+
+    &__img3{
+      width: 280px;
+      height: 187px;
+      top: 123px;
+      left: 230px;
+    }
+  }
+
+  .rooms{
+    width: 100%;
+
+    
+
+    &__container{
+      text-align: center;
+    }
+
+    &__title-container{
+      padding: 10px 0 45px;
+    }
+
+    &__hr{
+      display: none;
+    }
+
+    &__title{
+      font-size: 36px;
+    }
+
+    &_list{
+      justify-content: normal;
+      flex-direction: column;
+    }
+    
+    &__container{
+      width: 430px;
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+
+  .benefits{
+    margin: 12px 0 0;
+
+    &_image{
+      width: 50%;
+      height: 105px;
+    }
+
+    &__images div{
+      display: flex;
+    }
+
+    &__title{
+      font-size: 32px;
+      margin: 12px auto 0;
+    }
+  }
+
+  .benefit{
+    text-align: center;
+    margin: 28px 0 0;
+    padding: 0 0 45px;
+
+    &__text{
+      font-size: 22px;
+      line-height: 1.7;
+      margin: 28px auto 38px;
+      width: 79%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .intro__input_third {
+    .intro__date{
+      margin: 0 0 0 14px;
+    }
+
+    .intro__text{
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .about{
+    display: flex;
+    padding: 85px 0;
+
+    &__images{
+      width: 50%;
+    }
+  }
+
+  .rooms{
+    width: 875px;
+
+    &_list{
+      justify-content: space-between;
+    }
+  }
+
+  .room__container{
+    display: flex;
+    width: 425px;
+    justify-content: space-between;
+  }
+
+  .benefits__images{
+    width: 50%;
+  }
+
+  .benefit{
+    width: 50%;
+
+    &__text{
+      column-count: 2;
+    }
+  }
+
+  .benefits__container{
+    display: flex;
+    max-height: 484px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .intro{
+    padding: 104px 0 60px;
+    height: 140px;
+    background: url(../images/background/background.png) 50% 0 fixed;
+    background-size: cover;
+
+    &:before{
+      height: 375px;
+    }
+
+    &__title{
+      font-size: 32px;
+      line-height: 1;
+      margin: 25px auto 30px;
+    }
+
+    &__form{
+      margin: 84px auto 0;
+      width: 400px;
+      padding: 18px 0 0 0;
+    }
+
+    &__input_first{
+      padding: 0 15px 0;
+    }
+
+    &__input_second{
+      padding: 0 15px 0 11px;
+    }
+
+    &__input_third{
+      padding: 0 55px 0 0;
+    }
+
+    &__container{
+      display: block;
+      margin: 4px 0 0;
+    }
+
+    &__button{
+      line-height: 20px;
+      padding: 20px 15px;
+      margin: -5px 0;
+      font-size: 10px;
+    }
+  }
+
+  .about{
+    margin: 58px 0 0 0;
+
+    &__title{
+      font-size: 43px;
+      margin: 10px auto 8px;
+      max-width: 300px;
+    }
+
+    &__container{
+      padding: 0 0 0 105px;
+      width: 57%;
+    }
+
+    &__text{
+      font-size: 9px;
+      line-height: 1.8;
+      margin: 10px auto 17px;
+      width: 50%;
+    }
+
+    &__img1{
+      width: 245px;
+      height: 164px;
+      top: 117px;
+      left: -100px;
+    }
+
+    &__img2{
+      width: 179px;
+      height: 242px;
+      left: 125px;
+      top: 15px;
+    }
+
+    &__img3{
+      width: 232px;
+      height: 155px;
+      left: -70px;
+      top: -4px;
+    }
+
+  }
+
+  .rooms{
+    padding: 32px 0 0;
+
+    &_list{
+      width: 71%;
+      margin: 0 auto;
+    }
+
+    &__title-container{
+      margin: 0 0 25px;
+      text-align: center;
+    }
+
+    &__title{
+      font-size: 30px;
+      margin: 10px auto;
+      max-width: 700px;
+    }
+
+    &__hr{
+      margin: 0 auto;
+    }
+
+    &__container{
+      padding: 0 0 19px;
+    }
+  }
+
+  .room-big{
+    width: 305px;
+  }
+
+
+  .room__container{
+    width: 305px;
+  }
+
+  .benefits{
+    &_image{
+      width: 257px;
+      height: 168px;
+    }
+
+    &__title{
+      font-size: 43px;
+      width: 300px;
+      margin: 4px 0 0 0;
+    }
+
+    &__container{
+      max-width: 1024px;
+    }
+  }
+
+  .benefit{
+    padding: 43px 53px 35px;
+
+    &__text{
+      margin: 20px auto 15px;
+      font-size: 9px;
+      line-height: 2;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .intro{
+    padding: 125px 0;
+    height: 382px;
+
+    &:before{
+      height: 700px;
+    }
+
+    &__title{
+      font-size: 52.5px;
+      margin: 28px auto 38px;
+      line-height: 1.3;
+    }
+
+    &__input_first .intro__date{
+      margin: 0 0 0 36px;
+    }
+
+    &__input_second{
+      padding: 23px 15px 15px 11px;
+
+      .intro__text{
+        text-align: left;
+      }
+    }
+
+    &__input_third{
+      padding: 23px 55px 20px 0;
+    }
+
+    &__form{
+      width: 540px;
+      margin: 105px auto 0;
+    }
+
+    &__container{
+      display: flex;
+      align-items: center;
+      margin: 6px 0 0;
+    }
+
+    &__button{
+      padding: 45px 25px;
+    }
+  }
+
+
+  .about{
+    width: 1000px;
+
+    &__title{
+      font-size: 60px;
+      margin: 16px auto 16px;
+      width: 60%;
+    }
+
+    &__container{
+      width: 61%;
+    }
+
+    &__text{
+      font-size: 10.5px;
+      line-height: 1.95;
+      margin: 10px auto 25px;
+      width: 60%;
+    }
+
+    &__img1{
+      width: 345px;
+      height: 230px;
+      top: 162px;
+      left: -70px;
+    }
+
+    &__img2{
+      width: 252px;
+      height: 341px;
+      left: 248px;
+      top: 15px;
+    }
+
+    &__img3{
+      width: 326px;
+      height: 218px;
+      left: -27px;
+      top: -10px;
+    }
+  }
+
+  .rooms{
+    padding: 53px 0 0;
+
+    &__hr{
+      margin: 4px auto;
+    }
+
+    &__title-container{
+      text-align: center;
+      margin: 0 0 37px;
+    }
+
+    &__title{
+      font-size: 41.5px;
+      margin: 15px auto 11px;
+    }
+
+    &__container{
+      background: #f9f9f9;
+      padding: 0 0 30px;
+    }
+  }
+
+  .room-big{
+    width: 428px;
+  }
+
+  .benefit{
+    padding: 65px 75px;
+
+    &__text{
+      font-size: 10.5px;
+      line-height: 2;
+      margin: 28px auto 50px;
+    }
+  }
+
+  .benefits{
+    &_image{
+      width: 360px;
+      height: 237px;
+    }
+
+    &__title{
+      font-size: 60px;
+      margin: 8px 0;
+      width: 60%;
+    }
+
+    &__container{
+      max-width: 1440px;
+    }
+  }
+
+  .intro__month{
+    font-size: 9px;
+    margin: 5px 0 0 -4px;
+  }
+}

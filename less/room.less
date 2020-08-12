@@ -1,0 +1,585 @@
+@import "colors.less";
+@import "fonts.less";
+
+.room-intro{
+  background: url("../images/background/background-room.jpg") 0 0 no-repeat fixed;
+  background-size: contain;
+  position: relative;
+  color: @white;
+  text-transform: uppercase;
+
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(28, 28, 28, 0.2), rgba(28, 28, 28, 0.2));
+    width: 100%;
+  }
+
+  &__title{
+    font-family: @gildaFont;
+    line-height: 1.3;
+    font-size: 48px;
+    text-align: center;
+    position: relative;
+    padding: 110px 0 70px;
+  }
+
+  &__container{
+    position: absolute;
+    width: 100%;
+  }
+
+  &__text{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__navigation{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1.35px;
+
+    a{
+      color: @white;
+      text-decoration: none;
+      transition: all 0.3s;
+      padding: 2px 0 0;
+
+      &:hover{
+        border-bottom: 1px solid @white;
+      }
+    }
+  }
+
+  &__description{
+    margin: 0 70px 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__money{
+    font-family: @gildaFont;
+    display: block;
+  }
+
+  &__period{
+    margin: 3px 0 0 10px;
+    letter-spacing: 1.58px;
+  }
+
+  &__period{
+    margin: 3px 0 0 10px;
+    letter-spacing: 1.58px;
+  }
+
+}
+
+
+.room-page{
+  &__title{
+    font-family: @gildaFont;
+    color: @lightBlack;
+  }
+
+  &__subtitle{
+    color: @grey;
+    text-transform: uppercase;
+    letter-spacing: 1.16px;
+  }
+
+  &__intro{
+    position: absolute;
+  }
+
+  &__reviews{
+    color: @white;
+    text-transform: uppercase;
+    margin: 0 0 0 2px;
+    letter-spacing: 1.19px;
+  }
+
+  &__main{
+    display: flex;
+    align-items: start;
+  }
+
+}
+
+.room-form{
+  background: @lightBlack;
+  text-align: center;
+  width: 27%;
+
+  &__title{
+    background: #151515;
+    color: @white;
+    font-family: @gildaFont;
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container{
+    background: #151515;
+  }
+
+  &__action{
+    display: block;
+    color: @brown;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+  }
+
+  &__date{
+    display: block;
+    color: @brown;
+    font-family: @gildaFont;
+    letter-spacing: -2.25px;
+  }
+
+  &__month{
+    display: block;
+    color: @white;
+    font-style: italic;
+  }
+
+  &__weekday{
+    color: @darkGrey;
+    text-transform: uppercase;
+    letter-spacing: 0.68px;
+    display: block;
+  }
+
+}
+
+.room-benefits{
+  display: flex;
+  justify-content: space-between;
+  color: @grey;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  text-align: center;
+}
+
+.room-benefit{
+  width: 25%;
+  text-align: center;
+
+  &__image{
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__description{
+    color: @grey;
+    display: block;
+  }
+
+}
+
+.room-description{
+  color: @grey;
+  line-height: 2;
+  letter-spacing: 0.63px;
+}
+
+.room-services{
+  &__title{
+    font-family: @gildaFont;
+    color: @lightBlack;
+    letter-spacing: 0.76px;
+  }
+
+  &__list{
+    color: @grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    letter-spacing: 0.63px;
+  }
+}
+
+.room-service{
+  display: flex;
+  align-items: center;
+
+  &__description{
+    padding: 0 0 0 10px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .room-intro{
+    height: 240px;
+    background-size: cover;
+
+    &:before{
+      height: 240px;
+    }
+  }
+
+  .room-intro__container, .room-page__subtitle, .room-page__title{
+    display: none;
+  }
+
+  .room-page__main{
+    flex-direction: column-reverse;
+  }
+
+  .room-form{
+    width: 72%;
+    margin: 35px auto;
+    max-width: 540px;
+    padding: 30px;
+
+    &__title{
+      padding: 20px 10px;
+    }
+
+    &__row{
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    &__container{
+      padding: 20px 30px;
+      margin: 20px 0 20px;
+    }
+
+    &__date {
+      font-size: 36px;
+      line-height: 1.5;
+    }
+
+    &__weekday{
+      margin: 10px 0 0 0;
+    }
+  }
+
+  .room-form__action, .room-form__weekday, .room-form__month{
+    font-size: 14px;
+  }
+
+  .room__rating{
+    font-size: 8px;
+    padding: 3px 4px;
+  }
+
+  .room-page{
+    &__container{
+      width: 83%;
+      margin: 35px auto 10px;
+    }
+
+    &__intro{
+      bottom: 12px;
+      left: 24px;
+    }
+
+    &__reviews{
+      font-size: 9px;
+    }
+  }
+
+  .room-benefit{
+    &__image{
+      width: 40px;
+    }
+
+    &__description{
+      font-size: 16px;
+      margin: 15px 0 0;
+    }
+  }
+
+  .room-benefits{
+    margin: 23px 0;
+  }
+
+  .room-description{
+    margin: 30px 0 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .room-services{
+    margin: 35px 0 0;
+
+    &__title{
+      font-size: 22px;
+    }
+
+    &__list{
+      font-size: 16px;
+      grid-template-rows: repeat(3, 35px);
+      margin: 20px 0;
+    }
+  }
+
+  .room-service__icon{
+    width: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .room-intro__title{
+    display: none;
+  }
+
+  .room-form__month{
+    font-size: 9px;
+  }
+
+  .room-form__weekday{
+    font-size: 8.5px;
+    margin: 5px 0 0 0;
+  }
+
+  .room-page__container{
+    width: 66%;
+  }
+
+  .room-page__reviews{
+    font-size: 8.5px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+
+  .room-intro{
+    height: 200px;
+
+    &:before{
+      height: 200px;
+    }
+
+    &__container{
+      bottom: 11px;
+    }
+
+    &__text{
+      width: 68%;
+    }
+
+    &__navigation{
+      padding: 13px 0 0 38px;
+      width: 60%;
+    }
+
+    &__description{
+      font-size: 9px;
+    }
+
+    &__money{
+      font-size: 27px;
+    }
+  }
+
+
+
+  .room-page{
+    width: 61%;
+    margin: 20px auto 40px;
+
+    &__title{
+      font-size: 21.5px;
+    }
+
+    &__subtitle{
+      margin: 10px 0 18px;
+      font-size: 9px;
+    }
+
+    &__intro{
+      bottom: 13px;
+      left: 17px;
+    }
+  }
+
+  .room-benefits{
+    margin: 25px auto;
+  }
+
+  .room-benefit{
+    &__image{
+      width: 21px;
+    }
+
+    &__description{
+      font-size: 9px;
+      margin: 8px 0 0;
+    }
+  }
+
+  .room-description{
+    margin: 35px 0 0 0;
+    font-size: 9px;
+  }
+
+  .room-services{
+    margin: 11px 0 18px;
+
+    &__title{
+      font-size: 14px;
+    }
+
+    &__list{
+      margin: 8px 0 0;
+      font-size: 9px;
+      grid-template-rows: repeat(3, 26px);
+    }
+  }
+
+  .room-service__icon{
+    width: 14px;
+  }
+
+  .room-form{
+    margin: 0 0 0 10px;
+    padding: 0 15px 12px;
+
+    &__title{
+      font-size: 11px;
+      padding: 14px 10px;
+      margin: 15px 0 8px;
+    }
+
+    &__row{
+      width: 100%;
+      margin: 0 auto 10px;
+    }
+
+    &__container{
+      padding: 13px 13px 10px;
+    }
+
+    &__action{
+      font-size: 8px;
+    }
+
+    &__date{
+      font-size: 27px;
+      margin: 6px 0 2px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .room-intro {
+    height: 337px;
+
+    &:before{
+      height: 337px;
+    }
+
+    &__container{
+      bottom: 15px;
+    }
+
+    &__text{
+      width: 880px;
+    }
+
+    &__navigation{
+      width: 54%;
+      padding: 17px 0 0;
+    }
+
+    &__description{
+      font-size: 10.5px;
+    }
+
+    &__money{
+      font-size: 37.5px;
+    }
+  }
+
+  .room-page{
+    width: 880px;
+    margin: 38px auto;
+
+    &__title{
+      font-family: @gildaFont;
+      color: @lightBlack;
+      font-size: 30px;
+    }
+
+    &__subtitle{
+      font-size: 10.5px;
+      margin: 15px 0 25px;
+    }
+
+    &__intro{
+      bottom: 19px;
+      left: 20px;
+    }
+  }
+
+  .room-benefits{
+    margin: 38px auto;
+  }
+
+  .room-benefit__description{
+    font-size: 10.5px;
+    margin: 12px 0 0;
+  }
+
+  .room-description{
+    font-size: 10.5px;
+    margin: 55px 0 0 0;
+    padding: 0 0 45px;
+    border-bottom: 3px solid #f9f9f9;
+  }
+
+  .room-services{
+    margin: 28px 0 18px;
+
+    &__title{
+      font-size: 19px;
+    }
+
+    &__list{
+      font-size: 10.5px;
+      grid-template-rows: repeat(3, 30px);
+      margin: 15px 0 0;
+    }
+  }
+
+
+  .room-form{
+    margin: 0 0 0 18px;
+    padding: 10px 20px 24px;
+
+    &__title{
+      padding: 18px 10px;
+      margin: 15px 0;
+    }
+
+    &__row{
+      width: 95%;
+      margin: 0 auto 18px;
+    }
+
+    &__container{
+      padding: 12px 27px;
+    }
+
+    &__action{
+      font-size: 9px;
+    }
+
+    &__date{
+      font-size: 37.5px;
+      margin: 12px 0 12px;
+    }
+  }
+}

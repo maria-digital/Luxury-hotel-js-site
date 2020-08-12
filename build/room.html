@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__container"><a class="header__logo" href="index.html"><img class="header__logo" src="images/logo.svg" alt="Hotel Bayview" width="171"></a>
+        <nav><img class="header__menu" src="images/menu.svg" width="26" onclick="changeNav()"><img class="header__close" src="images/close.svg" width="19" onclick="changeNav()">
+          <ul class="header__navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="list.html">Rooms</a></li>
+            <li><a href="room.html">Single Room</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="">Our news</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="room-intro" data-speed="10" data-type="background">
+      <h1 class="room-intro__title">Adriatic Suite</h1>
+      <div class="room-intro__container">
+        <div class="room-intro__text">
+          <ul class="room-intro__navigation">
+            <li><a>Description</a></li>
+            <li><a>Room services</a></li>
+            <li><a>Extra services</a></li>
+            <li><a>Gallery</a></li>
+            <li><a>Reviews</a></li>
+          </ul>
+          <h4 class="room-intro__description"><span class="room-intro__money">300</span><span class="room-intro__period">$/for night</span></h4>
+        </div>
+      </div>
+    </section>
+    <section class="room-page">
+      <h1 class="room-page__title">Adriatic Suite</h1>
+      <h2 class="room-page__subtitle">Hotel Bayview</h2>
+      <div class="room-page__main">
+        <div class="room-page__container">
+          <div class="room room_adriatic room_page">
+            <div class="room-page__intro"><span class="room__rating">7.5</span><span class="room-page__reviews">5 reviews</span></div>
+          </div>
+          <div class="room-benefits">
+            <div class="room-benefit"><img class="room-benefit__image" src="images/icons/user.svg" width="29"><span class="room-benefit__description">3 guests</span></div>
+            <div class="room-benefit"><img class="room-benefit__image" src="images/icons/plan.svg" width="29"><span class="room-benefit__description">57 M2</span></div>
+            <div class="room-benefit"><img class="room-benefit__image" src="images/icons/apartment.svg" width="29"><span class="room-benefit__description">300$ / for night</span></div>
+            <div class="room-benefit"><img class="room-benefit__image" src="images/icons/calendar.svg" width="31"><span class="room-benefit__description">week price</span></div>
+          </div>
+          <p class="room-description">Offering 2&nbsp;balconies and views of&nbsp;Rovinj&rsquo;s Main Square, the lively waterfront and the main promenade, this spacious suite is&nbsp;air-conditioned, in&nbsp;addition to&nbsp;2&nbsp;SMART TVs, mini-bar and coffee/tea making facilities. Modern-style bathroom includes a&nbsp;walk-in shower, a&nbsp;bath tub, a&nbsp;hairdryer and free toiletries. It&nbsp;is&nbsp;decorated with oils on&nbsp;canvas, rare photographs, and exceptional decorations by&nbsp;renowned local and international artists. Guests will receive complimentary jug of&nbsp;water, natural sirup and a&nbsp;fruit basket once upon arrival.</p>
+          <div class="room-services">
+            <h3 class="room-services__title">Room Services</h3>
+            <ul class="room-services__list">
+              <li class="room-service"><img class="room-service__icon" src="images/icons/television.svg" width="20"><span class="room-service__description">Television</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/no-smoking.svg" width="20"><span class="room-service__description">No Smoking</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/summer.svg" width="16"><span class="room-service__description">Private Beach</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/bath.svg" width="19"><span class="room-service__description">Bathroom</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/bicycle.svg" width="19"><span class="room-service__description">Bike Rental</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/cutlery.svg" width="15"><span class="room-service__description">Breakfast Incl.</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/cocktail.svg" width="16"><span class="room-service__description">Welcome Drink</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/towel.svg" width="20"><span class="room-service__description">Loundry</span></li>
+              <li class="room-service"><img class="room-service__icon" src="images/icons/beds.svg" width="19"><span class="room-service__description">King Beds</span></li>
+            </ul>
+          </div>
+        </div>
+        <form class="room-form">
+          <h4 class="room-form__title">1 Guest</h4>
+          <div class="room-form__row">
+            <div class="room-form__container"><span class="room-form__action">Check-in</span><span class="room-form__date">26</span><span class="room-form__month">June, 2020</span><span class="room-form__weekday">Monday</span></div>
+            <div class="room-form__container"><span class="room-form__action">Check-out</span><span class="room-form__date">28</span><span class="room-form__month">June, 2020</span><span class="room-form__weekday">Wednesday</span></div>
+          </div>
+          <div class="button button_yellow button_big">Book now</div>
+        </form>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <footer class="footer">
+      <ul class="footer__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Booking</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </footer>
+    <script src="https://unpkg.com/shufflejs@5"></script>
+    <script src="all.js"></script>
+  </footer>
+</html>

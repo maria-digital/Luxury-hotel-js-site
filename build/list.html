@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__container"><a class="header__logo" href="index.html"><img class="header__logo" src="images/logo.svg" alt="Hotel Bayview" width="171"></a>
+        <nav><img class="header__menu" src="images/menu.svg" width="26" onclick="changeNav()"><img class="header__close" src="images/close.svg" width="19" onclick="changeNav()">
+          <ul class="header__navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="list.html">Rooms</a></li>
+            <li><a href="room.html">Single Room</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="">Our news</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="search-intro" data-speed="10" data-type="background">
+      <h1 class="search-intro__title">Search</h1>
+    </section>
+    <section class="search">
+      <div>
+        <div class="form">
+          <h2 class="search__title">All Branches</h2>
+          <form class="form__container">
+            <div>
+              <label class="form__label" for="checkIn">Check-in</label>
+              <div class="form__row">
+                <input class="form__input" id="checkIn" placeholder="26">
+                <select class="form__month">
+                  <option value="June">June</option>
+                </select>
+              </div>
+              <label class="form__label" for="guests">Guests</label>
+              <input class="form__input" id="guests" placeholder="1">
+            </div>
+            <div>
+              <label class="form__label" for="checkOut">Check-out</label>
+              <div class="form__row">
+                <input class="form__input" id="checkOut" placeholder="28">
+                <select class="form__month">
+                  <option value="July">July</option>
+                </select>
+              </div>
+              <label class="form__label" for="nights">Nights</label>
+              <input class="form__input" id="nights" placeholder="2">
+            </div>
+          </form>
+        </div>
+        <div class="filter">
+          <div class="filter-item">
+            <h2 class="search__title">Services</h2>
+            <div class="filter-item__row" id="servicesContainer">
+              <div class="services">
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="animalAllowed" name="animalAllowed">
+                  <label class="services__label" for="animalAllowed">Animal Allowed</label>
+                </div>
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="smookingRoom" name="smookingRoom">
+                  <label class="services__label" for="smookingRoom">Smooking Room</label>
+                </div>
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="seaView" name="seaView">
+                  <label class="services__label" for="seaView">Sea View</label>
+                </div>
+              </div>
+              <div>
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="swimmingPool" name="swimmingPool">
+                  <label class="services__label" for="swimmingPool">Swimming Pool</label>
+                </div>
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="wiFi" name="wiFi">
+                  <label class="services__label" for="wiFi">Wifi 24 H</label>
+                </div>
+                <div class="services__item">
+                  <input class="services__checkbox" type="checkbox" id="breakfastIncluded" name="breakfastIncluded">
+                  <label class="services__label" for="breakfastIncluded">Breakfast Included</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-item filter-item_room" id="sizeContainer">
+            <h2 class="search__title">Room Size</h2>
+            <div class="size">
+              <input class="size__input size__input_from" type="text" placeholder="0" id="from">
+              <input class="size__input size__input_to" type="text" placeholder="100" id="to">
+              <m2></m2>
+            </div>
+          </div>
+          <div class="filter-item filter-item_reviews" id="reviewsContainer">
+            <h2 class="search__title">Reviews</h2>
+            <div class="reviews">
+              <button class="reviews__item btn btn" type="button" id="0">0.0</button>
+              <button class="reviews__item btn btn" type="button" id="2">2.0</button>
+              <button class="reviews__item btn btn" type="button" id="4">4.0</button>
+              <button class="reviews__item btn btn" type="button" id="6">6.0</button>
+              <button class="reviews__item btn btn" type="button" id="8">8.0</button>
+              <button class="reviews__item btn btn" type="button" id="10">10.0</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search__right">
+        <h2 class="search__title">List</h2>
+        <div class="container__rooms"><a class="room filterDiv room_border" href="room.html" data-groups="[&quot;animalAllowed&quot;, &quot;breakfastIncluded&quot;, &quot;wiFi&quot;] ">
+            <div class="room room_adriatic room_middle">
+              <h4 class="room__title">Adriatic Suite</h4>
+            </div>
+            <div class="room__description room__description_small">
+              <h3 class="room__subtitle">Adriatic Suite</h3>
+              <ul class="room__benefits room__benefits_big">
+                <li class="room__benefit-item"><span class="room__rating">7.5</span><span class="room__benefit">5 Reviews</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_user" src="images/icons/user.svg" width="17" alt=""><span class="room__benefit">3 guests</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_square" src="images/icons/plan.svg" width="16" alt=""><span class="room__benefit room__square">57 m²</span></li>
+              </ul>
+              <p class="room__text room__text_list">Offering 2&nbsp;balconies and views of&nbsp;Rovinj&rsquo;sMain Square and the lively waterfront.</p>
+              <button class="button button_white">Book now from 300$</button>
+            </div></a><a class="room filterDiv room_border" href="room.html" data-groups="[&quot;wiFi&quot;, &quot;seaView&quot;, &quot;swimmingPool&quot;]">
+            <div class="room room_middle room_gallery">
+              <h4 class="room__title">Gallery</h4>
+            </div>
+            <div class="room__description room__description_small">
+              <h3 class="room__subtitle">Gallery</h3>
+              <ul class="room__benefits room__benefits_big">
+                <li class="room__benefit-item"><span class="room__rating">9.5</span><span class="room__benefit">4 Reviews</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_user" src="images/icons/user.svg" width="17" alt=""><span class="room__benefit">2 guests</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_square" src="images/icons/plan.svg" width="16" alt=""><span class="room__benefit room__square">37 m²</span></li>
+              </ul>
+              <p class="room__text room__text_list">Set at&nbsp;the very top floor of&nbsp;the hotel, this suite is&nbsp;air-conditioned.</p>
+              <button class="button button_white">Book now from 435$</button>
+            </div></a><a class="room filterDiv room_border" href="room.html" data-groups="[&quot;breakfastIncluded&quot;, &quot;smookingRoom&quot;, &quot;wiFi&quot;]">
+            <div class="room room_middle room_atelier">
+              <h4 class="room__title">Atelier</h4>
+            </div>
+            <div class="room__description room__description_small">
+              <h3 class="room__subtitle">Atelier</h3>
+              <ul class="room__benefits room__benefits_big">
+                <li class="room__benefit-item"><span class="room__rating">8.0</span><span class="room__benefit">5 Reviews</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_user" src="images/icons/user.svg" width="17" alt=""><span class="room__benefit">2 guests</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_square" src="images/icons/plan.svg" width="16" alt=""><span class="room__benefit room__square">25 m²</span></li>
+              </ul>
+              <p class="room__text room__text_list">Inspired by&nbsp;a&nbsp;workshop, Atelier rooms are a&nbsp;part of&nbsp;the old town&rsquo;s center.</p>
+              <button class="button button_white">Book now from 132$</button>
+            </div></a><a class="room filterDiv room_border" href="room.html" data-groups="[&quot;animalAllowed&quot;, &quot;swimmingPool&quot;, &quot;seaView&quot;]">
+            <div class="room room_middle room_grand_piazza">
+              <h4 class="room__title">Grand Piazza Suite</h4>
+            </div>
+            <div class="room__description room__description_small">
+              <h3 class="room__subtitle">Grand Piazza Suite</h3>
+              <ul class="room__benefits room__benefits_big">
+                <li class="room__benefit-item"><span class="room__rating">9.8</span><span class="room__benefit">7 Reviews</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_user" src="images/icons/user.svg" width="17" alt=""><span class="room__benefit">4 guests</span></li>
+                <li class="room__benefit-item"><img class="room__benefit_square" src="images/icons/plan.svg" width="16" alt=""><span class="room__benefit room__square">78 m²</span></li>
+              </ul>
+              <p class="room__text room__text_list">Offering views of&nbsp;Rovinj&rsquo;s Main Square, this spacious suite is&nbsp;air-conditioned.</p>
+              <button class="button button_white">Book now from 610$</button>
+            </div></a></div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <footer class="footer">
+      <ul class="footer__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Booking</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </footer>
+    <script src="https://unpkg.com/shufflejs@5"></script>
+    <script src="all.js"></script>
+  </footer>
+</html>

@@ -1,0 +1,677 @@
+@import "colors.less";
+@import "fonts.less";
+
+body{
+  font-family: @robotoFont;
+  min-width: 640px;
+}
+
+.header{
+  background: @lightBlack;
+  color: @grey;
+  font-size: 14px;
+  line-height: 2;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+
+  &:not(.header_open) .header__close{
+    display: none;
+  }
+
+  &__container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 442px;
+    font-size: 11px;
+    margin: -2px 10px 0 0;
+
+    a{
+      text-decoration: none;
+      transition: all 0.3s;
+      &:hover{
+        color: @white;
+        padding: 0 0 2px 0;
+        border-bottom: 1px solid @white;
+      }
+    }
+
+  }
+
+  &__link{
+    display: block;
+  }
+
+}
+
+
+.room{
+  position: relative;
+  display: block;
+  text-decoration: none;
+
+  &_big{
+    position: relative;
+  }
+
+  &_adriatic{
+    background: url("../images/rooms/adriatic.png");
+    background-size: cover;
+  }
+
+  &_atelier{
+    background: url("../images/rooms/atelier.png");
+    background-size: cover;
+  }
+
+  &_piazza{
+    background: url("../images/rooms/piazza.png");
+    background-size: cover;
+  }
+
+  &_gallery{
+    background: url("../images/rooms/gallery.png");
+    background-size: cover;
+  }
+
+  &_grand_piazza{
+    background: url("../images/rooms/grand-piazza.png");
+    background-size: cover;
+  }
+
+  &_page{
+    width: 578px;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    font-size: 11px;
+    color: @white;
+    position: absolute;
+  }
+
+  &__description{
+    background: @white;
+  }
+
+  &__subtitle{
+    font-family: @gildaFont;
+    line-height: 0.8;
+    color: @black;
+  }
+
+  &__benefit-item{
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__benefits{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text{
+    color: @grey;
+    width: 95%;
+  }
+
+  &_border{
+    border: 1px solid #f1f1f1;
+    color: @grey;
+  }
+
+  &__rating{
+    background: @black;
+    color: @white;
+  }
+
+}
+
+.room_big:before, .room_middle:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to top, @lightBlack, rgba(28, 28, 28, 0.5));
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.room_small, .room_middle{
+  position: relative;
+}
+
+.room_small{
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to top, @lightBlack, rgba(28, 28, 28, 0.5));
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.subtitle{
+  line-height: 2;
+  text-transform: uppercase;
+  position: relative;
+
+  &_white{
+    color: @white;
+  }
+}
+
+.short-info{
+  font-family: @gildaFont;
+  color: @lightBlack;
+  text-align: center;
+}
+
+.footer{
+  background: #151515;
+  color: @white;
+  font-size: 12px;
+
+  &__menu{
+    display: flex;
+    justify-content: space-between;
+
+    a{
+      color: @white;
+      text-decoration: none;
+      transition: all 0.3s;
+      padding: 2px 0 0;
+
+      &:hover{
+        border-bottom: 1px solid @white;
+      }
+    }
+  }
+
+}
+
+.title_yellow{
+  color: @brown;
+}
+
+.button{
+  text-transform: uppercase;
+  border: 2px solid @white;
+  color: @white;
+  background: transparent;
+  font-weight: 900;
+  letter-spacing: 0.85px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+
+  &:focus{
+    outline: none;
+  }
+
+  &:hover{
+    border: 2px solid @brown;
+    background: @brown;
+    cursor: pointer;
+    color: @white;
+  }
+
+  &_yellow{
+    border: 2px solid @brown;
+    background: @brown;
+
+    &:hover{
+      border: 2px solid @brown;
+      color: @brown;
+      background: transparent;
+    }
+  }
+
+  &_black{
+    border: 2px solid #151515;
+    background: #151515;
+  }
+
+  &_white{
+    border: 2px solid @brown;
+    color: @brown;
+  }
+
+  &_big{
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .header__navigation{
+    flex-direction: column;
+    text-transform: uppercase;
+    text-align: right;
+    width: 195px;
+    margin: 32px 0 0;
+    font-size: 14px;
+    padding: 0 8px 0 0;
+    transition: all 0.3s;
+
+    li {
+      border-bottom: 5px solid @brown;
+      padding: 0 0 5px 0;
+      margin: 3px 0 0 0;
+    }
+
+    a{
+      color: @white;
+    }
+  }
+
+  .header{
+    height: 36px;
+    transition: all 0.3s;
+
+    &__logo{
+      height: 26px;
+    }
+
+    &:not(.header_open) .header__navigation{
+      opacity: 0;
+    }
+
+    &_open{
+      height: 335px;
+
+      .header__navigation {
+        opacity: 1;
+      }
+
+      .header__menu{
+        display: none;
+      }
+
+    }
+
+    &__container{
+      width: 85%;
+      padding: 11px 0 0;
+    }
+
+    &__menu{
+      position: absolute;
+      right: 55px;
+      top: 8px;
+    }
+
+    &__close{
+      position: absolute;
+      right: 58px;
+      top: 11px;
+    }
+
+  }
+
+  .button{
+    padding: 15px 40px;
+    font-size: 18px;
+    min-width: 52%;
+  }
+
+  .subtitle{
+    font-size: 18px;
+  }
+
+  .rooms_list {
+    .room{
+      width: 430px;
+      height: 187px;
+      margin: 0 auto 25px;
+    }
+
+    .room__description{
+      display: none;
+    }
+  }
+
+  .short-info{
+    margin: 15px 0 12px;
+    line-height: 1.7;
+  }
+
+  .footer{
+    padding: 13px 48px;
+    font-size: 16px;
+
+    &__menu{
+      width: 408px;
+    }
+
+  }
+
+  .room{
+
+    &_page{
+      width: 98%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 227px;
+
+    }
+
+    &__title{
+      bottom: 17px;
+      left: 22px;
+      font-size: 18px;
+      letter-spacing: 1.8px;
+    }
+
+    &__container ul:nth-child(2){
+      display: none;
+    }
+
+    &__text_list{
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 10px 0 6px;
+    }
+
+    &_border{
+      margin: 0 0 20px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+  .header__menu{
+    display: none;
+  }
+
+  .header__navigation a{
+    color: @grey;
+  }
+
+  .short-info{
+    line-height: 1.8;
+    width: 700px;
+  }
+
+  .room__text_list{
+    margin: 14px 0;
+  }
+
+  .room_page{
+    height: 281px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .header{
+    padding: 17px 0 12px;
+
+    &__container{
+      width: 985px;
+      padding: 0 0 0 180px;
+      box-sizing: border-box;
+    }
+
+    &__logo{
+      width: 122px;
+      height: 17px;
+    }
+
+    &__navigation{
+      width: 438px;
+      margin: -4px 0 0 0;
+    }
+  }
+
+  .subtitle{
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+
+  .button{
+    font-size: 9px;
+    padding: 6px 28px;
+  }
+
+  .room{
+    &_big{
+      width: 305px;
+      height: 132px;
+    }
+
+    &_small{
+      width: 146px;
+      height: 132px;
+      margin: 0 0 17px 0;
+    }
+
+    &_middle{
+      width: 198px;
+      height: 133px;
+    }
+
+    &_page{
+      width: 412px;
+      height: 200px;
+    }
+
+    &__title{
+      bottom: 13px;
+      left: 20px;
+    }
+
+    &__description_big{
+      padding: 22px 15px 11px;
+    }
+
+    &__subtitle{
+      font-size: 16px;
+    }
+
+    &__benefits_small{
+      width: 68%;
+      font-size: 7px;
+      margin: 12px 0 0;
+    }
+
+    &__rating{
+      font-size: 8px;
+      padding: 3px 5px;
+    }
+
+    &__benefit_user{
+      width: 12px;
+    }
+
+    &__benefit_square{
+      width: 11px;
+    }
+
+    &__text_main{
+      width: 83%;
+      margin: 6px 0 8px;
+      font-size: 9px;
+    }
+
+    &_border{
+      margin: 0 14px 20px 0;
+      width: 198px;
+    }
+
+    &__description_small{
+      padding: 14px 15px 24px;
+    }
+
+    &__benefits{
+      font-size: 7px;
+      margin: 10px 3px 0;
+    }
+
+    &__benefit{
+      margin: 0 0 0 8px;
+    }
+
+    &__text{
+      font-size: 8px;
+      margin: 8px 0;
+      line-height: 2.3;
+
+      &_list{
+        width: 100%;
+      }
+    }
+
+  }
+
+  .short-info{
+    font-size: 13.5px;
+    margin: 54px auto 43px;
+  }
+
+  .footer{
+    padding: 18px 35px;
+
+    &__menu{
+      margin: 0 17%;
+      width: 350px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .header{
+    padding: 17px 0 10px;
+
+    &__container{
+      width: 880px;
+    }
+
+    &__logo{
+      width: 172px;
+      height: 25px;
+    }
+
+    &__navigation{
+      width: 444px;
+      margin: -4px 7px 0 0;
+    }
+  }
+
+  .subtitle{
+    font-size: 10.5px;
+    letter-spacing: 1.16px;
+  }
+
+  .button{
+    font-size: 8.5px;
+    padding: 9px 24px;
+  }
+
+  .room{
+    &_big{
+      width: 428px;
+      height: 185px;
+    }
+
+    &_middle{
+      width: 278px;
+      height: 186px;
+    }
+
+    &_small{
+      width: 203px;
+      height: 184px;
+      margin: 0 0 25px 0;
+    }
+
+    &__title{
+      bottom: 15px;
+      left: 22px;
+    }
+
+    &__description_big{
+      padding: 27px 23px;
+    }
+
+    &__subtitle{
+      font-size: 22.5px;
+    }
+
+    &__benefits_small{
+      width: 60%;
+    }
+
+    &__rating{
+      padding: 5px;
+      font-size: 8.5px;
+    }
+
+    &__text_main{
+      width: 80%;
+      margin: 17px 0;
+    }
+
+    &_border{
+      margin: 0 18px 30px 0;
+      width: 278px;
+    }
+
+    &__description_small{
+      padding: 23px 20px 27px;
+    }
+
+    &__benefits{
+      font-size: 10px;
+      margin: 12px 0 0;
+    }
+
+    &__benefit{
+      margin: 0 0 0 6px;
+    }
+
+    &__benefits_big{
+      width: 96%;
+    }
+
+    &__text{
+      line-height: 2;
+      font-size: 10.5px;
+    }
+
+  }
+
+  .short-info{
+    font-size: 19px;
+    margin: 48px auto 40px;
+  }
+
+  .footer{
+    padding: 28px 22px;
+
+    &__menu{
+      margin: 0 18.7%;
+      width: 332px;
+    }
+  }
+}

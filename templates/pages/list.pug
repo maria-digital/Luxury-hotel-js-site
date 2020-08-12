@@ -1,0 +1,137 @@
+extends ../layout/main
+
+block main
+    section(class="search-intro" data-speed="10" data-type="background")
+        h1.search-intro__title Search
+    section.search
+        div
+            div.form
+                h2.search__title All Branches
+                form.form__container
+                    div
+                        label(for="checkIn" class="form__label") Check-in
+                        div.form__row
+                            input(id="checkIn" class="form__input" placeholder="26")
+                            select.form__month
+                                option(value="June") June
+                        label(for="guests" class="form__label") Guests
+                        input(id="guests" class="form__input" placeholder="1")
+                    div
+                        label(for="checkOut" class="form__label") Check-out
+                        div.form__row
+                            input(id="checkOut" class="form__input" placeholder="28")
+                            select.form__month
+                                option(value="July") July
+                        label(for="nights" class="form__label") Nights
+                        input(id="nights" class="form__input" placeholder="2")
+            div.filter
+                div.filter-item
+                    h2.search__title Services
+                    #servicesContainer.filter-item__row
+                        div.services
+                            div.services__item
+                                input(type="checkbox" id="animalAllowed" name="animalAllowed" class="services__checkbox")
+                                label(for="animalAllowed" class="services__label") Animal Allowed
+                            div.services__item
+                                input(type="checkbox" id="smookingRoom" name="smookingRoom" class="services__checkbox")
+                                label(for="smookingRoom" class="services__label") Smooking Room
+                            div.services__item
+                                input(type="checkbox" id="seaView" name="seaView" class="services__checkbox")
+                                label(for="seaView" class="services__label") Sea View
+                        div
+                            div.services__item
+                                input(type="checkbox" id="swimmingPool" name="swimmingPool" class="services__checkbox")
+                                label(for="swimmingPool" class="services__label") Swimming Pool
+                            div.services__item
+                                input(type="checkbox" id="wiFi" name="wiFi" class="services__checkbox")
+                                label(for="wiFi" class="services__label") Wifi 24 H
+                            div.services__item
+                                input(type="checkbox" id="breakfastIncluded" name="breakfastIncluded" class="services__checkbox")
+                                label(for="breakfastIncluded" class="services__label") Breakfast Included
+                #sizeContainer.filter-item.filter-item_room
+                    h2.search__title Room Size
+                    div.size
+                        input(type="text" placeholder="0" class="size__input size__input_from" id="from")
+                        -
+                        input(type="text" placeholder="100" class="size__input size__input_to" id="to")
+                        m2
+                #reviewsContainer.filter-item.filter-item_reviews
+                    h2.search__title Reviews
+                    div.reviews
+                        button.reviews__item.btn(type='button' class='btn' id='0') 0.0
+                        button.reviews__item.btn(type='button' class='btn' id='2') 2.0
+                        button.reviews__item.btn(type='button' class='btn' id='4') 4.0
+                        button.reviews__item.btn(type='button' class='btn' id='6') 6.0
+                        button.reviews__item.btn(type='button' class='btn' id='8') 8.0
+                        button.reviews__item.btn(type='button' class='btn' id='10') 10.0
+        div.search__right
+            h2.search__title List
+            div.container__rooms
+                a.room.filterDiv.room_border(href='room.html' data-groups='["animalAllowed", "breakfastIncluded", "wiFi"] ')
+                    div.room.room_adriatic.room_middle
+                        h4.room__title Adriatic Suite
+                    div.room__description.room__description_small
+                        h3.room__subtitle Adriatic Suite
+                        ul.room__benefits.room__benefits_big
+                            li.room__benefit-item
+                                span.room__rating 7.5
+                                span.room__benefit 5 Reviews
+                            li.room__benefit-item
+                                img(src="images/icons/user.svg" width="17" alt="" class="room__benefit_user")
+                                span.room__benefit 3 guests
+                            li.room__benefit-item
+                                img(src="images/icons/plan.svg" width="16" alt="" class="room__benefit_square")
+                                span.room__benefit.room__square 57 m²
+                        p.room__text.room__text_list Offering 2&nbsp;balconies and views of&nbsp;Rovinj&rsquo;sMain Square and the lively waterfront.
+                        button.button.button_white Book now from 300$
+                a.room.filterDiv.room_border(href='room.html' data-groups='["wiFi", "seaView", "swimmingPool"]')
+                    div.room.room_middle.room_gallery
+                        h4.room__title Gallery
+                    div.room__description.room__description_small
+                        h3.room__subtitle Gallery
+                        ul.room__benefits.room__benefits_big
+                            li.room__benefit-item
+                                span.room__rating 9.5
+                                span.room__benefit 4 Reviews
+                            li.room__benefit-item
+                                img(src="images/icons/user.svg" width="17" alt="" class="room__benefit_user")
+                                span.room__benefit 2 guests
+                            li.room__benefit-item
+                                img(src="images/icons/plan.svg" width="16" alt="" class="room__benefit_square")
+                                span.room__benefit.room__square 37 m²
+                        p.room__text.room__text_list Set at&nbsp;the very top floor of&nbsp;the hotel, this suite is&nbsp;air-conditioned.
+                        button.button.button_white Book now from 435$
+                a.room.filterDiv.room_border(href='room.html' data-groups='["breakfastIncluded", "smookingRoom", "wiFi"]')
+                    div.room.room_middle.room_atelier
+                        h4.room__title Atelier
+                    div.room__description.room__description_small
+                        h3.room__subtitle Atelier
+                        ul.room__benefits.room__benefits_big
+                            li.room__benefit-item
+                                span.room__rating 8.0
+                                span.room__benefit 5 Reviews
+                            li.room__benefit-item
+                                img(src="images/icons/user.svg" width="17" alt="" class="room__benefit_user")
+                                span.room__benefit 2 guests
+                            li.room__benefit-item
+                                img(src="images/icons/plan.svg" width="16" alt="" class="room__benefit_square")
+                                span.room__benefit.room__square 25 m²
+                        p.room__text.room__text_list Inspired by&nbsp;a&nbsp;workshop, Atelier rooms are a&nbsp;part of&nbsp;the old town&rsquo;s center.
+                        button.button.button_white Book now from 132$
+                a.room.filterDiv.room_border(href='room.html' data-groups='["animalAllowed", "swimmingPool", "seaView"]')
+                    div.room.room_middle.room_grand_piazza
+                        h4.room__title Grand Piazza Suite
+                    div.room__description.room__description_small
+                        h3.room__subtitle Grand Piazza Suite
+                        ul.room__benefits.room__benefits_big
+                            li.room__benefit-item
+                                span.room__rating 9.8
+                                span.room__benefit 7 Reviews
+                            li.room__benefit-item
+                                img(src="images/icons/user.svg" width="17" alt="" class="room__benefit_user")
+                                span.room__benefit 4 guests
+                            li.room__benefit-item
+                                img(src="images/icons/plan.svg" width="16" alt="" class="room__benefit_square")
+                                span.room__benefit.room__square 78 m²
+                        p.room__text.room__text_list Offering views of&nbsp;Rovinj&rsquo;s Main Square, this spacious suite is&nbsp;air-conditioned.
+                        button.button.button_white Book now from 610$

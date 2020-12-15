@@ -13,4 +13,5 @@
 + Создание формы поиска на JavaScript.
 + Реализация фильтра по трём параметрам на JavaScript.
 
+
 * [Ссылка на готовый проект](https://maria-digital.github.io/Luxury-hotel-js-site/build/index.html)

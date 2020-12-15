@@ -14,4 +14,4 @@
 + Реализация фильтра по трём параметрам на JavaScript.
 
 ** **
-* [Ссылка на готовый проект](https://maria-digital.github.io/Luxury-hotel-js-site/build/index.html)
+[Ссылка на готовый проект](https://maria-digital.github.io/Luxury-hotel-js-site/build/index.html)

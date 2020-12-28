@@ -1,5 +1,21 @@
 # Luxury hotel best resort 
 
+Hotel website, consisting of three pages:
+1. Main page
+2. Room search page
+3. Room page.
+
+Technologies used:
++ Responsive layout with PixelPerfect.
++ Creation of a mobile version.
++ Methodology BEM.
++ Building the project in Gulp.
++ Connecting LESS, the Pug template engine.
++ Creating a JavaScript search form.
++ JavaScript implementation of a three-parameter filter.
+
+** **
+
 Сайт отеля, состоящий из трёх страниц:
 1. Главная страница
 2. Страница поиска номеров
@@ -15,4 +31,4 @@
 + Реализация фильтра по трём параметрам на JavaScript.
 
 ** **
-[Ссылка на готовый проект](https://maria-digital.github.io/Luxury-hotel-js-site/build/index.html)
+[Link to the finished project](https://maria-digital.github.io/Luxury-hotel-js-site/build/index.html)
